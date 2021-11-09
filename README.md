@@ -39,6 +39,7 @@ Must type y to prune the cache.
 <br/>
 
 ### To Attach the Existing Container
+Attaching container can be done when you get out of the container with detach status by Ctrl + p, q.
 > make attach
 
 # 2. How to Handle the Container
