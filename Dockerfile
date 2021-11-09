@@ -21,6 +21,6 @@ RUN         sudo chmod 755 /home/$USER/run.sh
 
 VOLUME      /home/$USER/CUBRID/databases
 
-EXPOSE      1523 8001
+EXPOSE      1523 8001 30000 33000
 
 ENTRYPOINT  su - $USER
