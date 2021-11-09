@@ -47,6 +47,8 @@ Must type `y` to prune the cache.
 Attaching container can be done when you get out of the container with detach status by `Ctrl + p, q`.
 > make attach
 
+<br/>
+
 # 2. How to Initialize after Creating Container
 > . run.sh
 
