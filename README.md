@@ -32,26 +32,22 @@ If you are not using Apple Silicon Chipset, remove the `--platform` option on th
 
 <br/>
 
-### To flush the Cache of the Image
+### To Flush the Cache of the Image
 Must type y to prune the cache.
 > make prune
 
 <br/>
 
-# 2. At the Initial Container
+### To Attach the Existing Container
+> make attach
 
-### 1) su - $USER
-In the default option via this file, $USER is cubrid
+# 2. How to Handle the Container
+### 1) At the first time
+> su - $USER
 
-<br/>
+> cd && . run.sh
 
-### 2) sh CUBRID-$CUBRID_BUILD_VERSION-linux.x86_64.sh
-Type the default answer on the interaction. In my case, q -> yes -> yes -> yes -> yes.
-
-<br/>
-
-### 3) . /home/$USER/.cubrid.sh
-Execute the generated config file. The blank in front of the path is necessary.
+(A blank between `dot` and `run.sh` should be existed!)
 
 <br/>
 

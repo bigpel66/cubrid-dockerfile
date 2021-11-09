@@ -10,13 +10,17 @@ RUN         useradd -ms /bin/bash $USER
 RUN         usermod -aG wheel $USER
 RUN         echo '%wheel ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 RUN         su - $USER
-RUN         wget -P /home/$USER http://ftp.cubrid.org/CUBRID_Engine/$CUBRID_VERSION/CUBRID-$CUBRID_BUILD_VERSION-Linux.x86_64.sh
+RUN         wget -P /home/$USER http://ftp.cubrid.org/CUBRID_Engine/$CUBRID_VERSION/CUBRID-$CUBRID_BUILD_VERSION-Linux.x86_64.tar.gz
+RUN         tar -zxf /home/$USER/CUBRID-$CUBRID_BUILD_VERSION-Linux.x86_64.tar.gz -C /home/$USER
 RUN         mkdir -p /home/$USER/CUBRID/databases /home/$USER/CUBRID/var/CUBRID_SOCK
 RUN         chmod -R 755 /home/$USER/CUBRID
 RUN         chown -R $USER /home/$USER/CUBRID
+
+COPY        run.sh /home/$USER
+RUN         sudo chmod 755 /home/$USER/run.sh
 
 VOLUME      /home/$USER/CUBRID/databases
 
 EXPOSE      1523
 
-ENTRYPOINT  [ "/bin/bash" ]
+ENTRYPOINT  [ "/bin/bash"]
