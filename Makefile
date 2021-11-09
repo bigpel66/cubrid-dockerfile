@@ -8,7 +8,7 @@ build		:
 
 .PHONY	:	create
 create	:
-	docker container run -i -t --name $(CONTAINER_NAME) --platform=linux/x86_64 -p 1523:1523 $(IMAGE_NAME):$(VERSION)
+	docker container run -i -t --name $(CONTAINER_NAME) --platform=linux/x86_64 -p 1523:1523 -p 8001:8001 $(IMAGE_NAME):$(VERSION)
 
 .PHONY	:	run
 run			: build create

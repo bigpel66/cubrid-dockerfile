@@ -17,3 +17,4 @@ cubrid createdb demodb ko_KR.utf8
 cd
 
 cubrid service start
+cubrid server start demodb

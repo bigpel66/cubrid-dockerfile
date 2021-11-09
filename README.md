@@ -95,3 +95,36 @@ Open the shell setting file, and add the following commands.
 
 ### 4) Symbolic Link the JDK
 > sudo ln -s "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/server/libjvm.dylib" "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/lib/libserver.dylib"
+
+### 5) Prevent TLS Server Error
+> sudo vi /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/security/java.security
+
+<br/>
+
+Before
+```
+jdk.tls.disabledAlgorithms=SSLv3, TLSv1, TLSv1.1, RC4, DES, MD5withRSA, \
+    DH keySize < 1024, EC keySize < 224, 3DES_EDE_CBC, anon, NULL, \
+    include jdk.disabled.namedCurves
+```
+
+After
+```
+jdk.tls.disabledAlgorithms=SSLv3, RC4, DES, MD5withRSA, \
+    DH keySize < 1024, EC keySize < 224, 3DES_EDE_CBC, anon, NULL, \
+    include jdk.disabled.namedCurves
+```
+
+<br/>
+
+### 6) Open the Cubrid Manager
+The ID, Password on initial login is both `admin`.
+
+<br/>
+
+### 7) Update JDBC Driver
+Press the button on the end of the Driver Version row. Click the JDBC Driver Update.
+
+<br/>
+
+### 8) Connection Completed
