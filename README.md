@@ -47,7 +47,7 @@ Must type y to prune the cache.
 
 > cd && . run.sh
 
-(A blank between `dot` and `run.sh` should be existed!)
+(A blank between `dot` and `run.sh` should be existed! If you use `./run.sh`, this will be performed on the subshell. Thus, will not be applied the given environment variables.)
 
 <br/>
 
