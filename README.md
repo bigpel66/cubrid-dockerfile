@@ -33,17 +33,16 @@ If you are not using Apple Silicon Chipset, remove the `--platform` option on th
 <br/>
 
 ### To Flush the Cache of the Image
-Must type y to prune the cache.
+Must type `y` to prune the cache.
 > make prune
 
 <br/>
 
 ### To Attach the Existing Container
-Attaching container can be done when you get out of the container with detach status by Ctrl + p, q.
+Attaching container can be done when you get out of the container with detach status by `Ctrl + p, q`.
 > make attach
 
 # 2. How to Handle the Container
-### 1) At the first time
 > su - $USER
 
 > cd && . run.sh
