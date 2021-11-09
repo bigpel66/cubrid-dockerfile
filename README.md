@@ -68,3 +68,30 @@ Attaching container can be done when you get out of the container with detach st
 
 ### 3) Status
 > cubrid service status
+
+<br/>
+
+# 4. Using Manager of Cubrid
+
+### 1) Install DMG File on the Cubrid Website
+https://www.cubrid.com/downloads
+
+<br/>
+
+### 2) Install JDK with Recommended Version
+> brew tap adoptopenjdk/openjdk
+
+> brew install --cask adoptopenjdk8
+
+<br/>
+
+### 3) Export the JDK Path on the `.*_rc` File
+Open the shell setting file, and add the following commands.
+> export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+
+> export PATH=$PATH:$JAVA_HOME/bin
+
+<br/>
+
+### 4) Symbolic Link the JDK
+> sudo ln -s "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/server/libjvm.dylib" "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/lib/libserver.dylib"
