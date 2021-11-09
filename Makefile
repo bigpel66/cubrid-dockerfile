@@ -1,6 +1,6 @@
 CONTAINER_NAME=cubrid
 IMAGE_NAME=bigpel66/cubrid
-VERSION=0.0.1
+VERSION=0.0.0
 
 .PHONY 	:	build
 build		:
