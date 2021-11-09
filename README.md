@@ -48,11 +48,9 @@ Attaching container can be done when you get out of the container with detach st
 > make attach
 
 # 2. How to Initialize after Creating Container
-> su -u $USER
-
 > . run.sh
 
-(A blank between `dot` and `run.sh` should be existed!)
+(A blank between `dot` and `run.sh` should be existed! If not, the setting values will be applied on the subshell.)
 
 <br/>
 
