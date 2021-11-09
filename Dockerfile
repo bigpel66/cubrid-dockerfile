@@ -23,4 +23,4 @@ VOLUME      /home/$USER/CUBRID/databases
 
 EXPOSE      1523
 
-ENTRYPOINT  [ "/bin/bash"]
+ENTRYPOINT  ["/bin/bash"]

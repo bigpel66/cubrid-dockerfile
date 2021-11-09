@@ -1,6 +1,6 @@
 CONTAINER_NAME=cubrid
 IMAGE_NAME=bigpel66/cubrid
-VERSION=0.0.0
+VERSION=0.0.1
 
 .PHONY 	:	build
 build		:
@@ -23,6 +23,9 @@ clean		:
 
 .PHONY	:	fclean
 fclean	:	rmf clean
+
+.PHONY	: re
+re			:	fclean run
 
 .PHONY	:	prune
 prune		:

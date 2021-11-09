@@ -32,6 +32,11 @@ If you are not using Apple Silicon Chipset, remove the `--platform` option on th
 
 <br/>
 
+### To Re-Make the Container
+> make re
+
+<br/>
+
 ### To Flush the Cache of the Image
 Must type `y` to prune the cache.
 > make prune
@@ -43,11 +48,11 @@ Attaching container can be done when you get out of the container with detach st
 > make attach
 
 # 2. How to Initialize after Creating Container
-> su - $USER
+> su -u $USER
 
-> cd && . run.sh
+> . run.sh
 
-(A blank between `dot` and `run.sh` should be existed! If you use `./run.sh`, this will be performed on the subshell. Thus, will not be applied the given environment variables.)
+(A blank between `dot` and `run.sh` should be existed!)
 
 <br/>
 
