@@ -7,7 +7,7 @@ If you are not using Apple Silicon Chipset, remove the `--platform` option on th
 <br/>
 
 ### To Create the Container of Cubrid
-If you are not using Apple Silicon Chipset, remove the `--platform` option on the `build` rules.
+If you are not using Apple Silicon Chipset, remove the `--platform` option on the `build` rule.
 > make create
 
 <br/>
@@ -97,6 +97,8 @@ Open the shell setting file, and add the following commands.
 
 ### 4) Symbolic Link the JDK
 > sudo ln -s "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/server/libjvm.dylib" "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/lib/libserver.dylib"
+
+<br/>
 
 ### 5) Prevent TLS Server Error
 > sudo vi /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/security/java.security
