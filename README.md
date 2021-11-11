@@ -95,7 +95,7 @@ Open the shell setting file, and add the following commands.
 
 <br/>
 
-### 4) Symbolic Link the JDK
+### 4) Symbolic Link to the JDK
 > sudo ln -s "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/server/libjvm.dylib" "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/lib/libserver.dylib"
 
 <br/>
