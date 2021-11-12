@@ -1,13 +1,13 @@
 # 1. Makefile of the Cubrid on Dockerfile
 
 ### To Make Image of Cubrid
-If you are not using Apple Silicon Chipset, remove the `--platform` option on the `build` rule.
+If you are not using Apple Silicon Chipset, remove the `--platform` option on the `build` rule. Basically, Apple Silicon build the image with ARM64 Architecture, so Dynamic Library might not be executed. The `--platform` option on `build` makes the image to be built with x86_64 Architecture which can execute the Dynamic Library for Cubrid.
 > make build
 
 <br/>
 
 ### To Create the Container of Cubrid
-If you are not using Apple Silicon Chipset, remove the `--platform` option on the `build` rule.
+If you are not using Apple Silicon Chipset, remove the `--platform` option on the `create` rule. Basically, Apple Silicon create the container with ARM64 Architecture, so x86_64 image cannot be used. The `--platform` option on `create` makes the container to be created with x86_64 Architecture which is based on x86_64 image.
 > make create
 
 <br/>
